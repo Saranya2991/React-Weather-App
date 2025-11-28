@@ -24,7 +24,7 @@ function Weather(){
     function getWeather (e) {
        e.preventDefault();
         
-        const weatherData = axios(`http://api.weatherapi.com/v1/current.json?key=216d504e34c1417390b170115252611&q=${search}&aqi=no`)
+        const weatherData = axios(`https://api.weatherapi.com/v1/current.json?key=216d504e34c1417390b170115252611&q=${search}&aqi=no`)
         weatherData.then(function(success){
             console.log(success.data)
             setCity(success.data.location.name)
